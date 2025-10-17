@@ -1,0 +1,5 @@
+{
+  "name": "Analyseur de Commentaires YouTube",
+  "description": "Une application web pour extraire et analyser le sentiment des commentaires d'une vidéo YouTube à l'aide de l'API Gemini.",
+  "requestFramePermissions": []
+}
