@@ -8,9 +8,6 @@
 // FIX: Explicitly typed YOUTUBE_API_KEY as a string to prevent a TypeScript error
 // in `services/youtubeService.ts` when comparing the key's literal type with a placeholder string.
 export const YOUTUBE_API_KEY: string = "AIzaSyCQoKj0MFnmVXsyNImiRXamL9rUm4HSMEA";
-export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
-
-
 // 2. Clé API pour Google Gemini
 //    La clé API Gemini est maintenant gérée via les variables d'environnement (process.env.API_KEY)
 //    et n'a plus besoin d'être définie ici pour des raisons de sécurité.
