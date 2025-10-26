@@ -46,9 +46,12 @@ const analysisSchema = {
 };
 
 export const analyzeComments = async (comments: Comment[], language: Language): Promise<AnalysisResult> => {
-  if (!process.env.API_KEY) {
-    throw new Error("La clé API Gemini n'est pas configurée dans les variables d'environnement.");
-  }
+  // if (!process.env.API_KEY) {
+  //   throw new Error("La clé API Gemini n'est pas configurée dans les variables d'environnement.");
+  // }
+  if (!import.meta.env.VITE_GEMINI_API_KEY) {
+  throw new Error("La clé API Gemini n'est pas configurée.");
+    }
 
   if (!comments || comments.length === 0) {
     // Gère le cas où il n'y a pas de commentaires pour éviter une erreur.
