@@ -3,7 +3,8 @@ import type { AnalysisResult, Comment } from '../types';
 import type { Language } from '../hooks/useTranslation';
 
 // Initialize GoogleGenAI with apiKey from the environment variable.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const analysisSchema = {
   type: Type.OBJECT,
