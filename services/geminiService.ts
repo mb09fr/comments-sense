@@ -2,6 +2,14 @@ import { GoogleGenAI, Type } from "@google/genai";
 import type { AnalysisResult, Comment } from '../types';
 import type { Language } from '../hooks/useTranslation';
 
+import { GEMINI_API_KEY } from "../config";
+
+const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+
+if (!GEMINI_API_KEY) {
+  throw new Error("Clé API Gemini non détectée.");
+}
+
 // Initialize GoogleGenAI with apiKey from the environment variable.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
